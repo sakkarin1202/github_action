@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 left-0">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-blue-600">DormDeals</a>
+                
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-toggle" class="lg:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+                <!-- Menu Items -->
+                <div class="hidden lg:flex space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Login</a>
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Sign Up</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden flex flex-col space-y-2 py-4 bg-white shadow-md">
+                <a href="#" class="block text-gray-700 hover:text-blue-600 px-4">Home</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 px-4">About</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 px-4">Contact</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 px-4">Login</a>
+                <a href="#" class="block bg-blue-600 text-white px-4 py-2 rounded-lg mx-4 text-center hover:bg-blue-700">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="flex flex-col items-center justify-center h-screen text-center px-6">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Welcome to DormDeals</h1>
+        <p class="text-lg text-gray-600 max-w-xl mb-6">Find the best deals on dorm essentials, trade products, and connect with others.</p>
+        <div>
+            <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700">Get Started</a>
+            <a href="#" class="ml-4 text-blue-600 text-lg hover:underline">Learn More</a>
+        </div>
+    </section>
+
+    <script>
+        // Toggle Mobile Menu
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
